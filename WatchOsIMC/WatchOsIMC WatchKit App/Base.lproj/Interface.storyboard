@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchOsIMC_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="P8O-Z3-Rkp">
+                            <items>
+                                <label alignment="left" text="Peso:" id="tgR-50-eir"/>
+                                <label alignment="left" text="50" id="kbw-O8-fzF"/>
+                            </items>
+                        </group>
+                        <slider width="1" alignment="left" continuous="YES" value="50" maximum="200" steps="200" id="6Nj-Gs-L0S">
+                            <connections>
+                                <action selector="modificarPeso:" destination="AgC-eL-Hgc" id="ObU-Gp-RFa"/>
+                            </connections>
+                        </slider>
+                        <group width="1" alignment="left" id="cwF-At-uzn">
+                            <items>
+                                <label alignment="left" text="Estatura:" id="i3S-Y6-lEo"/>
+                                <label alignment="left" text="0.5" id="eA4-bS-gZM"/>
+                            </items>
+                        </group>
+                        <slider width="1" alignment="left" continuous="YES" value="50" minimum="50" maximum="230" steps="180" id="U3n-QC-h2F">
+                            <connections>
+                                <action selector="modificarEstatura:" destination="AgC-eL-Hgc" id="rxc-4m-77C"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" title="Calcular IMC" id="VXs-Mi-8Jl">
+                            <connections>
+                                <action selector="calcularIMC" destination="AgC-eL-Hgc" id="9eY-So-ky3"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="estaturaValor" destination="eA4-bS-gZM" id="qih-aN-eMF"/>
+                        <outlet property="pesoValor" destination="kbw-O8-fzF" id="Et2-To-g8m"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--IdentificadorDatos-->
+        <scene sceneID="owh-hE-I0s">
+            <objects>
+                <controller identifier="IdentificadorDatos" id="dHg-JO-Oaq" customClass="VistaDatos" customModule="WatchOsIMC_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Masa Corporal:" id="hS2-hs-xEl"/>
+                        <label alignment="left" id="Vvz-eQ-AxK"/>
+                    </items>
+                    <connections>
+                        <outlet property="imcResultado" destination="Vvz-eQ-AxK" id="sRc-RN-lDI"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="328"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WatchOsIMC_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
