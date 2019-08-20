@@ -38,12 +38,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         // Dispose of any resources that can be recreated.
     }
 
-    func insertNewObject(_ sender: Any) {
+    @objc func insertNewObject(_ sender: Any) {
         let context = self.fetchedResultsController.managedObjectContext
         let newEvent = Event(context: context)
              
         // If appropriate, configure the new managed object.
-        newEvent.timestamp = NSDate()
+        newEvent.timestamp = NSDate() as Date
 
         // Save the context.
         do {
@@ -93,7 +93,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         return true
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let context = fetchedResultsController.managedObjectContext
             context.delete(fetchedResultsController.object(at: indexPath))
@@ -175,7 +175,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             case .move:
                 configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Event)
                 tableView.moveRow(at: indexPath!, to: newIndexPath!)
-        }
+            }
     }
 
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

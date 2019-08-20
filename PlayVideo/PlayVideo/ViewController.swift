@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func play() {
-        self.addChildViewController(controlador)
+        self.addChild(controlador)
         controlador.view.frame = CGRect(x: 10.0,y: 20.0,width: 350.0,height: 250.0)
         self.view.addSubview(controlador.view)
         reproductor.play()

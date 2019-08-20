@@ -31,10 +31,10 @@ class ViewController: UIViewController {
     
     func asincrono() {
         let urls = "http://dia.ccm.itesm.mx/"
-        let url = NSURL(string: urls)
-        let session = URLSession.shared
-        let bloque = {(datos: NSData?, URLResponse: URLResponse, Error: NSError) -> Void in
-            let texto = NSString(data: datos! as Data, encoding: String.Encoding.utf8.rawValue)
+        _ = NSURL(string: urls)
+        _ = URLSession.shared
+        _ = {(datos: NSData?, URLResponse: URLResponse, Error: NSError) -> Void in
+            _ = NSString(data: datos! as Data, encoding: String.Encoding.utf8.rawValue)
         }
         
         //let dt = session.dataTask(with: url, completionHandler: {(NSData, URLResponse, NSError) -> Void in
