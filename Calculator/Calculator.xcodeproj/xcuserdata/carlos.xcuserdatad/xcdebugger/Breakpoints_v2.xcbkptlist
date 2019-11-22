@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "06273E76-F2BF-49EA-8EE8-8DB0A577F199"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "8C73D5D1-75F1-4120-ADD3-1D30E544AE51"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -19,6 +21,7 @@
             landmarkType = "3">
             <Locations>
                <Location
+                  uuid = "8C73D5D1-75F1-4120-ADD3-1D30E544AE51 - 5f1498f86964a158"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -34,6 +37,7 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
+                  uuid = "8C73D5D1-75F1-4120-ADD3-1D30E544AE51 - 6324744163210dec"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -49,6 +53,7 @@
                   offsetFromSymbolStart = "70">
                </Location>
                <Location
+                  uuid = "8C73D5D1-75F1-4120-ADD3-1D30E544AE51 - 48a987a614fbd995"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -64,6 +69,7 @@
                   offsetFromSymbolStart = "23">
                </Location>
                <Location
+                  uuid = "8C73D5D1-75F1-4120-ADD3-1D30E544AE51 - b86f8f86143f9acb"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -79,6 +85,7 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
+                  uuid = "8C73D5D1-75F1-4120-ADD3-1D30E544AE51 - 88775a1864619ab9"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
